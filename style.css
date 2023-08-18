@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+
+
+.main{
+    background-color: #545496;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4vw;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 2vw 3vw;
+    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+    background-color: #111827;
+
+}
+label{
+    font-size: 1.2vw;
+    color: #fff;
+    margin: 1.5vw 0;
+}
+input{
+    outline: none;
+    border: none;
+    padding: 1vw;
+    font-size: 1vw;
+    border-radius: 0.5vw;
+    
+}
+legend{
+    color: #fff;
+    font-size: 1vw;
+}
+fieldset{
+    border: none;
+}
+#dropdown{
+    font-size: 1vw;
+    outline: none;
+    padding: 0.8vw;
+    border-radius: 0;
+    border: none;
+}
+option{
+    color: red;
+}
+button{
+    font-size: 1vw;
+    padding: 1vw;
+    border: none;
+    cursor: pointer;
+ position: relative;
+ border-radius: 0.5vw;
+ margin: 1.5vw 0;
+ 
+ 
+}
+button::before{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 10%;
+    z-index: -1;
+    border-radius: 0.5vw;
+    transition: 1s all;
+    background-color: #6242d6;
+}
+button:hover::before{
+width: 100%;
+
+}
+
+ fieldset label input[type=radio]{
+    border: 0px;
+    width: 10%;
+    height: 1em;
+}
+
+
+@media only screen and (max-width:600px){
+    .main{
+        height: auto;
+    }
+    form{
+        width: 100%;
+        clip-path: none;
+    }
+    label{
+        font-size: 6vw;
+       
+    }
+    input{
+         padding: 2.3vw 1vw;
+        font-size: 4vw; 
+    }
+    button{
+        font-size: 3vw;
+        padding: 2vw 1vw;
+    }
+    legend{
+        font-size: 3vw;
+    }
+    #dropdown{
+        font-size: 3vw;
+        padding: 1.3vw 1vw;
+    }
+    fieldset legend{
+       margin:1vw 0;
+    }
+    fieldset label {
+        font-size: 4vw;
+    }
+    fieldset label input[type=radio]{
+        border: 0px;
+        width: 10%;
+        height: 0.7em;
+    }
+}
